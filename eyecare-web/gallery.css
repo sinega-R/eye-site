@@ -423,9 +423,7 @@ iframe{
     {
        flex-direction: column;
     }
-    .layer{
-        z-index: -10;
-    }
+    
     
     
     .yt{
