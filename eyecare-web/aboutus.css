@@ -1,0 +1,692 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: white; */
+    font-family: 'Poppins', sans-serif;
+
+  
+  
+
+}
+
+
+
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+    background: rgb(114,238,232);
+    background: radial-gradient(circle, rgba(114,238,232,1) 0%, rgba(252,70,107,1) 100%);
+    font-weight: 100;
+    font-size: 18px;
+    
+
+}
+.top a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+.top a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+@media(max-width:700px)
+{
+    .top {
+      flex-direction: column;
+      align-items: center;
+}
+.top h5,
+h4,
+a 
+{
+    font-size: 12px;
+}
+.mob,
+.mail{
+    display: none;
+}
+
+
+}
+
+
+
+.header
+{
+    min-height: 100vh ;
+    width: 100%;background-color:#5a5f5f;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+.logo
+{
+    width: 100px;
+    height:80px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+} 
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.nav-links ul li::after
+{
+    content:'';
+    width:0%;
+    height:2px;
+    background-color: gold;
+    display: block;
+    margin: auto;
+    transition: .5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width:700px){
+   
+.header img, .logo
+{
+    width: 50px;
+    height:50px;
+    
+}
+  .text-box  h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links ul li a{
+        color:#fff;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .nav-links{
+        position: fixed;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(13,116,238,1) 100%);
+       
+        height: 100vh;
+        width: 200px;
+        text-align: left;
+        top: 0;
+        right: -200px;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+        
+    }
+}
+.current-page {
+    border-bottom: 2px solid gold;
+
+
+}  
+.current-page:hover {
+    color: peru;
+}
+.sub-header
+{
+    height: 15vh;
+    width: 100%;
+    background: rgb(114,238,232);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1
+{
+    margin-top: 70px;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+   
+    position: relative;
+    background: black;
+    overflow: hidden;
+   
+
+}
+.eye-carebtn{
+    text-decoration: none;
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        color: #fff;
+        z-index: 1;
+        background-color: rgb(73, 199, 73);
+        font-size: 22px;
+        line-height: 26px;
+        transform: rotate(-90deg) translateY(-50%) translateX(50%);
+        border-top-left-radius: 7px;
+        padding: 10px 20px;
+        border-top-right-radius: 7px;
+        transform-origin: right center;
+        border: 1px solid #548bff;
+    }
+    .eye-carebtn a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+
+    .eye-carebtnn{
+        display: block;
+       position: fixed;
+       bottom: 0px;
+       right: 0px;
+       
+       text-align: right;
+       z-index: 1;
+       
+       transform: rotate(360deg) translateY(0%) translateX(1%);
+       
+       border-top-right-radius: 7px;
+       border-top-left-radius: 7px;
+       padding: 10px 20px;
+       line-height: 26px;
+     
+       background-color: rgb(73, 199, 73);
+    }
+    .eye-carebtnn:hover{
+        animation: shake .68s linear infinite;
+    }
+    @keyframes shake 
+    {
+        0%{
+            transform: translateX(0%);
+        }
+        25%{
+            transform: translateX(-10%);
+        }
+        50%{
+            transform: translateX(10%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+
+
+
+        .eye-carebtnn a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+
+        @media (max-width:700px)
+        {
+            .about-contains .eye-carebtn a{
+               
+                font-size: 12px;
+               
+               
+            }
+           .eye-carebtnn a{
+               
+                font-size: 12px;
+               
+               
+            }
+        }
+
+
+
+
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+    background: rgb(114,238,232);
+background: radial-gradient(circle, rgba(114,238,232,1) 0%, rgba(252,70,107,1) 100%);
+    font-weight: 100;
+    font-size: 18px;
+    
+
+}
+.top a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+@media(max-width:700px)
+{
+    .top {
+      flex-direction: column;
+      align-items: center;
+}
+.top h5,
+a 
+{
+    font-size: 12px;
+}
+}
+
+
+
+.header
+{
+    min-height: 100vh ;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(about.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+ 
+}
+.logo
+{
+    width: 100px;
+    height:80px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+} 
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.nav-links ul li::after
+{
+    content:'';
+    width:0%;
+    height:2px;
+    background-color: gold;
+    display: block;
+    margin: auto;
+    transition: .5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box
+{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   
+
+}
+
+.text-box
+{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.text-box h1{
+    font-size: 60px;
+    margin-top: 50px;
+    
+}
+.text-box p{
+    margin: 40px;
+    font-size: 40px;
+ 
+}
+.hero-btn
+{
+    display:inline-block;
+    text-decoration: none;
+    background-color: #01D6A3;
+    border: 1px solid#fff;
+    color: #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+  
+}
+
+.hero-btn a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.hero-btn a:hover{
+    color: black;
+   
+}
+.hero-btn:hover
+{
+    border: 1px solid black;
+  
+    transition: 1s;
+}
+
+@media (max-width:700px)
+{
+    .header
+    {
+        min-height: 70vh ;
+        
+    
+    }
+   
+    .sub-header{
+        height: 25vh;
+
+    }
+    .sub-header h1
+{
+   
+    font-size: 25px;
+    font-weight: 600;
+}
+.service-header{
+    flex-direction: column;
+}
+.service-header h1{
+    font-size: 20px;
+}
+.text-box h1{
+    font-size: 20px;
+    margin-top: 0px;
+    
+}
+.text-box p{
+    margin: 10px;
+    font-size: 20px;
+ 
+}
+.hero-btn .btn{
+    align-items: center;
+}
+}
+.about-contains{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+   
+    
+}
+.about-contains .about-clinic{
+    padding: 60px;
+    width: 50%;
+}
+.about-contains .about-clinic  h1{
+    font-size: 30px;
+    color: black;
+}.about-contains .about-clinic p{
+    font-size: 20px;
+    line-height: 1.30em;
+    padding-top: 20px;
+    color: rgb(175, 168, 168);
+}
+.about-contains .about-clinic span{
+    color: black;
+}
+.about-time{
+    width: 50%;
+    padding: 60px;
+   
+   
+}
+.about-time h1{
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+    text-align: center;
+
+}
+.about-time ul{
+    border: 1px solid green;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.about-time ul li{ 
+   border-bottom: 1px solid black;
+    list-style: none;
+    color: black;
+
+}
+.about-time span{
+    font-size: 20px;
+   /* padding-left: 80px; */
+   float: right;
+   color: black;
+}
+
+.hero-btn
+{
+    display:inline-block;
+    text-decoration: none;
+    background-color: #01D6A3;
+    border: 1px solid#222;
+    color: #222;
+    padding: 12px 34px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+  
+}
+.hero-btn:hover
+{
+    border: 1px solid black;
+   background: transparent;
+    transition: 1s;
+}
+.hero-btn .btn a{
+    text-decoration: none;
+    color: #222;
+}
+
+
+
+@media (max-width:700px) {
+
+    .about-container{
+        flex-direction: column;
+        overflow: hidden;
+    
+    }
+    .about-container .about-box{
+       
+        display: flex;
+       flex-direction: column;
+    
+    }
+    
+    
+    
+    
+    .about-box .about-welcome .about-section1{
+        position: absolute;
+        margin-top: 5px;
+       
+    }
+    .about-box .about-welcome .about-section1 h1{
+        font-size: 20px;
+    
+    }
+    .about-box .about-welcome .about-section1 h3{
+       font-size: 30px; 
+    }
+    .about-box .about-welcome .about-section2 img{
+        width: 300px;
+        height: auto;
+        transform: translateY(150px);
+         border-radius: 20px;
+    }
+    span{
+        font-size: 30px;
+    }
+    .about-contains{
+       
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .about-contains .about-clinic{
+        padding: 0;
+        width: 100%;
+    }
+    .about-contains .about-clinic  h1{
+        font-size: 25px;
+       
+    }.about-contains .about-clinic p{
+        font-size: 18px;
+       
+    }
+    .about-contains .about-clinic span{
+       
+        font-size: 18px;
+        text-align: justify;
+    }
+    .about-time{
+       
+        padding: 0;
+        width: 100%;
+       
+       
+    }
+    
+    
+    
+    .about-time span{
+        font-size: 16px;
+       
+    }
+    .about-time a{
+        margin: 10px;
+    }   
+  
+    .eye-carebtn a{
+        font-size: 20px;
+
+    }
+
+    
+
+}
+.about-section1 h1, h3 ,span {
+    color:antiquewhite
+}
+
+
+/* footer */
+.footer
+{
+    background-color: #FFDAE0;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4
+{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.footer p{
+    font-weight: 400;
+    padding:0 60px;
+    color: #222;
+
+}
+.foot{
+    font-weight: bold;
+    color: #222;
+    font-size: 16px;
+}
+@media (max-width:700px){
+    .footer p{
+   
+       text-align: justify;
+       
+    }
+
+}
